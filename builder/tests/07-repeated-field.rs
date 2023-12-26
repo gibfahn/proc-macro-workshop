@@ -45,6 +45,7 @@ fn main() {
         .executable("cargo".to_owned())
         .arg("build".to_owned())
         .arg("--release".to_owned())
+        .env(vec!["PATH".to_owned()]) // TODO(gib): Added because Vec<String> shouldn't be optional IMO.
         .build()
         .unwrap();
 
